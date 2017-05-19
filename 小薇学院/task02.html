@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>html</title>
+
+<style type="text/css">
+  body{margin:0;}
+  ul{list-style: none;}
+  body{background-color: #dedede }
+  header{
+    height:70px;
+    background: #333333;
+  }
+  header img{
+     width: 160px;
+    height: 46px;
+    margin: 12px 30px;
+    float: left;
+  }
+  header div ul{
+    float: right;
+    padding: 0.5em;
+  }
+  header div ul li{
+    display: inline;
+    color: white;
+    padding-right: 1em;
+  }
+  header div ul li a{
+    color: aliceblue;
+    text-decoration: none;
+  }
+  .title{
+    border: 1px solid red;
+    height: 50px;
+    width: 100px;
+  }
+  footer{
+    height:50px;
+    background: #333333;
+    position: relative;  
+  }
+  footer>p{
+     position: absolute;
+    left: 50%;
+    color: aliceblue;
+  }
+
+  .main{
+    width:97%;
+    margin:20px auto;
+    background: #fff;
+  }
+  .pic,article{
+    padding: 15px 20px 30px;
+    text-align: justify;
+  }
+  article h3{
+    color:dimgray;
+  }
+  article>p{
+    color: darkgray;
+  }
+  section{
+    /*首行缩进2个汉字*/
+    text-indent:2em;
+    /*line-height是行间距属性*/
+    line-height: 25px;  
+  }
+  ol{
+    margin-left:40px;
+  }
+  figcaption{
+    width:120px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  label{
+    vertical-align:top;
+  }
+
+  #btn{
+    height: 40px;
+    width: 98%;
+    border-radius: 3px;
+    color: blue;
+    font-size: 19px;
+    background: antiquewhite;
+    margin: 10px 10px;
+  }
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <a href="javascript:void(0)" onclick="location.reload()">
+    <img src="baidu.jpg" alt="">
+  </a>
+  <div>
+    <ul>
+      <li><a href="#first">导航链接1</a></li>
+      <li><a href="#second">导航链接2</a></li>
+      <li><a href="#third">导航链接3</a></li>
+      <li><a href="#">导航链接4</a></li>
+    </ul>
+  </div>
+</header>
+<div class="main" id="first">
+  <article>
+        <h2>文章一级标题</h2>
+        <h3>文章二级标题</h3>
+        <p>作者: zhou 发布时间: <time>2017-05-03</time></p>
+      <section>
+        <p>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。换行了<br/>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、换行了<br/>用户提交的评论、交互式组件，或者其他独立的内容项目。<a href="javascript:void(0)">这里是一个链接</a>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或<b>新闻文章、博客</b>、用户提交的评论、交互式组件，或者其他独立的内容项目。</p>
+        <img src="http://ww2.sinaimg.cn/large/005MTBGujw1faq8d7ptvdj31400p0acr.jpg" alt="替代文字" width="300" height="200">
+        
+      </section>
+      <ol>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ol>
+      <address>
+        address标签：You can contact author at <a href="javascript:void(0)">www.xxx.com</a>.<br>
+      </address>
+  </article>
+
+</div>
+<div class="main" id="second">
+  <article>
+        <h2>另一篇文章一级标题</h2>
+        <h3>文章二级标题</h3>
+        <p>作者: zhou 发布时间: <time>2017-05-03</time></p>
+      <section>
+        <p>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。换行了<br/>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、换行了<br/>用户提交的评论、交互式组件，或者其他独立的内容项目。<a href="javascript:void(0)">这里是一个链接</a>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或<b>新闻文章、博客</b>、用户提交的评论、交互式组件，或者其他独立的内容项目。</p>
+        <img src="http://ww2.sinaimg.cn/large/005MTBGujw1faq8d7ptvdj31400p0acr.jpg" alt="替代文字" width="300" height="200">
+        <p>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。换行了<br/>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、换行了<br/>用户提交的评论、交互式组件，或者其他独立的内容项目。<a href="javascript:void(0)">这里是一个链接</a>article元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或<b>新闻文章、博客</b>、用户提交的评论、交互式组件，或者其他独立的内容项目。</p>
+      </section>
+      <h3>定义列表(有层次关系)</h3>
+      <dl>
+        <dt>导演:</dt>
+        <dd>陈凯歌</dd>
+        <dt>主演:</dt>
+        <dd>成龙</dd>
+      </dl>
+      <h3>引用</h3>
+      <p>我最喜欢的一首歌叫<cite>江南皮革厂倒闭了</cite>，这是一首<q>励志</q>的歌</p>
+      <blockquote cite="www.baidu.com">
+        <p>理想是人生的太阳。</p><p>—— 德莱赛</p>
+      </blockquote>
+  </article>
+</div>
+<div class="main" id="third">
+  <div class="pic">
+    <h2>图片</h2>
+      
+    <div>
+      <figure>
+        <figcaption>图片说明</figcaption>
+        <img src="http://ww2.sinaimg.cn/large/005MTBGujw1faq8d7ptvdj31400p0acr.jpg" alt="替代文字" width="120px" height="80px">
+      </figure>
+    </div>
+    <div>
+      <figure>
+        <figcaption>图片说明</figcaption>
+        <img src="http://ww2.sinaimg.cn/large/005MTBGujw1faq8d7ptvdj31400p0acr.jpg" alt="替代文字" width="120px" height="80px">
+      </figure>
+    </div>
+    <div>
+      <figure>
+        <figcaption>图片说明</figcaption>
+        <img src="http://ww2.sinaimg.cn/large/005MTBGujw1faq8d7ptvdj31400p0acr.jpg" alt="替代文字" width="120px" height="80px">
+      </figure>
+    </div>
+    <ul>
+      <li>不指定宽高，原图大小显示</li>
+      <li>指定宽度，按比例缩放到指定宽度</li>
+      <li>指定高度，按比例缩放到指定高度</li>
+      <li>指定宽高，强制按指定宽高显示</li>
+    </ul>
+  </div>
+</div>
+<div class="main">
+  <article>
+    <h2>最后一篇文章一级标题</h2>
+    <h3>文章二级标题</h3>
+    <p>作者: zhou 发布时间: <time>2017-05-03</time></p>
+    <ol>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+    </ol>
+    <h3>表格</h3>
+      <p>Simple table with header</p>
+    <table border="1">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </table>
+    <p>Table with thead, tfoot, and tbody</p>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Header content 1</th>
+          <th>Header content 2</th>
+          <th>Header content 3</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td rowspan="2">Body content 1</td>
+          <td>Body content 2</td>
+          <td>Body content 3</td>
+        </tr>
+        <tr>
+          <td>Body content 2</td>
+          <td>Body content 3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Footer content 1</td>
+          <td colspan="2">Footer content 2</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p>Table with colgroup</p>
+    <table border="1">
+      <colgroup span="4" class="columns" ></colgroup>
+      <tr>
+        <th>Countries</th>
+        <th>Capitals</th>
+        <th>Population</th>
+        <th>Language</th>
+      </tr>
+      <tr>
+        <td>USA</td>
+        <td>Washington D.C.</td>
+        <td>309 million</td>
+        <td>English</td>
+      </tr>
+      <tr>
+        <td>Sweden</td>
+        <td>Stockholm</td>
+        <td>9 million</td>
+        <td>Swedish</td>
+      </tr>
+    </table>
+
+    <p>Table with colgroup and col</p>
+    <table border="1">
+      <colgroup>
+        <col class="column1" style="background-color: green">
+        <col class="columns2plus3" span="2" style="background-color: red">
+      </colgroup>
+      <tr>
+        <th>Lime</th>
+        <th>Lemon</th>
+        <th>Orange</th>
+      </tr>
+      <tr>
+        <td>Green</td>
+        <td>Yellow</td>
+        <td>Orange</td>
+      </tr>
+    </table>
+
+    <p>Simple table with caption</p>
+    <table border="1">
+      <caption>Awesome caption</caption>
+      <tr>
+        <td>Awesome data</td>
+      </tr>
+    </table>
+  </article>
+</div>
+<div class="main">
+  <div class="pic">
+    <h2>表单</h2>
+    <div>
+      <div>
+        <label for="sex">性别:</label>
+        <input type="radio" name="sex" id="" value="nan">男
+        <input type="radio" name="sex" id="" value="nv">女
+      </div>
+      <div>
+        <label for="city">城市:</label>
+        <!-- multiple size="3"  select多选 -->
+        <select name="country" id="" >
+          <option value="1">天津</option>
+          <option value="2">北京</option>
+          <option value="3">上海</option>
+          <option value="4">深圳</option>
+          <option value="5">广州</option>
+          <optgroup label="北方">
+            <option value="1">天津</option>
+            <option value="2">北京</option>
+            <option value="3">上海</option>
+          </optgroup>
+          <optgroup label="南方">
+            <option value="4">深圳</option>
+            <option value="5">广州</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label>爱好:</label>
+        <input type="checkbox" name="" id="" value="1">篮球
+        <input type="checkbox" name="" id="" value="2">足球
+        <input type="checkbox" name="" id="" value="3">毽球
+      </div>
+      <div>
+        <label for="ww">个人描述:</label>
+        <textarea id="ww" cols="20" rows="4" placeholder="多行文本框"></textarea>
+      </div>
+        
+
+        
+        
+      </div>
+        date：<input type="date">
+        datetime-local: <input type="datetime-local"><br>
+        month: <input type="month">
+        week: <input type="week">
+        time: <input type="time">
+        <input type="color">
+
+    <!-- novalidate不要验证 -->
+    <form action="/echo" >
+      <p>
+        <input required minlength="2" maxlength="10" placeholder="输入2-10位">
+      </p>
+      <p>
+        <input required type="email" name="" placeholder="输入email" />
+      </p>
+      <p>
+        <input required type="url" name="" placeholder="输入url" />
+      </p>
+      <p>
+        <input required pattern="1\d{10}" placeholder="输入手机号">
+      </p>
+      <p>
+        <input required type="password" placeholder="输入密码">
+      </p>
+        <button type="submit">submit(默认)</button>
+          <button type="reset">reset</button>
+        <div>
+          <button id="btn" type="button">buttton</button>
+        </div>
+      
+    </form>
+  </div>
+</div>
+
+
+<footer><p>@版权所有</p></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+</body>
+</html>

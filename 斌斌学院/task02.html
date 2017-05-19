@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+   
+    <!--<li>第一名：福州（样例），10</li>
+      <li>第二名：福州（样例），10</li> -->
+  </ul>
+
+
+
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 70],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+(function () {
+
+  /*
+  在注释下方编写代码
+  遍历读取aqiData中各个城市的数据
+  将空气质量指数大于60的城市显示到aqi-list的列表中
+  */
+  var numArr = Array("一","二","三","四","五","六");
+  var len = aqiData.length;
+  var list = document.getElementById("aqi-list");
+
+  var arr = aqiData.filter(function(element, index, array){
+      return (element[1] > 60);
+  });
+  arr.sort(function(a,b){
+      return b[1]-a[1];
+  });
+
+    //   遍历数组---for
+  for(var i = 0; i<arr.length; i++){
+        var node=document.createElement("li");
+
+        /*var textnode=document.createTextNode("第"+(i+1)+"名："+arr[i][0]+"（样例）"+" , "+arr[i][1]);
+        node.appendChild(textnode);*/
+        node.innerHTML = "第"+numArr[i]+"名："+arr[i][0]+"（样例）"+" , "+arr[i][1];
+
+        list.appendChild(node);
+  }
+
+    //   遍历数组---while
+  var j=0;
+  while(j<arr.length){
+        var node=document.createElement("li");
+        node.innerHTML = "第"+numArr[j]+"名："+arr[j][0]+"（样例）"+" , "+arr[j][1];
+        list.appendChild(node);
+        j++;
+
+  }
+
+  //   遍历数组---for..in
+  for(var i in arr){
+        var node=document.createElement("li");
+        node.innerHTML = "第"+numArr[i]+"名："+arr[i][0]+"（样例）"+" , "+arr[i][1];
+        list.appendChild(node);
+  }
+
+  //   遍历数组---forEach
+  arr.forEach(function(element,index){
+        var node=document.createElement("li");
+        node.innerHTML = "第"+numArr[index]+"名："+element[0]+"（样例）"+" , "+element[1];
+        list.appendChild(node);
+  })
+
+
+
+})();
+
+</script>
+
+
+</body>
+</html>

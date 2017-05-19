@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+<button id="button">确认填写</button>
+
+<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+<script type="text/javascript">
+    (function() {
+    
+        /*
+            js的span取值：document.getElementById('span-id').innerText
+            jquery的span取值：$("#span-id").html();
+        */
+
+        var btn = document.getElementById("button");
+        var v = document.getElementById("aqi-input");
+        
+        /*btn.onclick = function(){
+            document.getElementById('aqi-display').innerText = v.value;
+        }*/
+
+        /*btn.addEventListener("click", function(){
+            document.getElementById('aqi-display').innerText = v.value;
+        }, false);*/
+
+
+        // 跨浏览器的事件对象EventUtil
+        var EventUtil = {
+            addHandler: function(element, type, handler, useCapture) {   // 事件监听
+                if(element.addEventListener) {
+                    element.addEventListener(type, handler, useCapture ? true : false);
+                } else if(element.attachEvent) {
+                    element.attachEvent('on' + type, handler);
+                } else if(element != window) {
+                    element['on' + type] = handler;
+                }
+            },
+            removeHandler: function(element, type, handler, useCapture) {   // 移除事件监听
+                if(element.removeEventListener) {
+                    element.removeEventListener(type, handler, useCapture ? true : false);
+                } else if(element.detachEvent) {
+                    element.detachEvent('on' + type, handler);
+                } else if(element != window) {
+                    element['on' + type] = null;
+                }
+            },
+            getEvent: function(event) {   // 获取event对象，返回event对象的引用
+                return event ? event : window.event;
+            },
+            preventDefault: function(event){    // 取消或者阻止事件默认行为
+                if(event.preventDefault) {
+                    event.preventDefault();
+                }else {
+                    event.returnValue = false;
+                }
+            },
+            getCharCode: function(event) {    // 获取键盘按键键码。
+                if(typeof event.charCode == 'number') {
+                    return event.charCode;
+                }else {
+                    return event.keyCode;
+                }
+            }
+        };
+
+        var handler = function(){
+            document.getElementById('aqi-display').innerText = v.value;
+        }
+
+        // EventUtil.addHandler(btn, "click", handler);
+        var v = EventUtil.getEvent();
+        console.log(v);
+
+    })();
+</script>
+
+</body>
+</html>
